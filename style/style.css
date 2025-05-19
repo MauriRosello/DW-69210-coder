@@ -17,10 +17,16 @@ body {
     background-size: cover;
     background-position: center;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
     padding: 0 40px;
+}
+
+main {
+    flex: 1 0 auto;
 }
 
 footer {
@@ -48,11 +54,43 @@ ul {
     border-top: 1px solid #fff;
     border-bottom: 1px solid #fff;
     padding: 20px;
-    font-size: 20px;
+    font-size: 26px;
+}
+
+.nav-link {
+    color: #fff;
+    font-weight: 200;
+}
+
+.nav-link:hover {
+    color: #6e6e6e;
+    text-decoration: none;
+}
+
+/*manera mas simple de cambiar el color del icono hamburguesa ya que 
+es un background-image generado con un SVG embebido en CSS*/
+.navbar-toggler-icon {
+    filter: brightness(0) invert(1);
 }
 
 .top-bar {
-    padding: 20px
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.left-icons,
+.right-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.logo-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
 }
 
 /* Imágenes de íconos */
@@ -84,12 +122,24 @@ h1 {
     text-align: center;
 }
 
-.hero-text {
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
     text-align: center;
+}
+
+.hero-text {
     font-size: 26px;
 }
 
 .whatsapp-container {
+    position: absolute;
+    right: 0;
+    bottom: 50%;
     padding: 12px;
     background-color: #333;
     width: 100px;
@@ -111,6 +161,10 @@ footer {
 .footer-content {
     max-width: 1200px;
     margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
 }
 
 .footer-item img {
@@ -226,4 +280,72 @@ form button {
     padding: 40px 0;
     min-width: 300px;
     max-width: 500px;
+}
+
+@media (max-width: 767px) {
+    .mobile-title {
+        text-align: center;
+        padding-left: 40px;
+        margin-bottom: 0;
+    }
+
+    .navbar .container-fluid {
+        justify-content: start;
+    }
+
+    .nav-item .nav-link {
+        font-size: 16px;
+    }
+
+    .top-bar .logo {
+        width: 100px;
+    }
+
+    .top-bar .icon {
+        width: 30px;
+    }
+
+   .footer-content {
+        justify-content: center;
+    }
+
+    .footer-item {
+        flex: 0 0 45%;
+        max-width: 45%;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    .whatsapp-container {
+        width: 58px;
+        height: 54px;
+    }
+
+    .hero-text {
+        display: none;
+    }
+
+    .hero-text-mobile {
+        font-size: 12px;
+        margin-bottom: 0;
+    }
+
+    .whatsapp-icon {
+        width: 33px;
+    }
+
+    .mobile-title {
+        font-size: 19px;
+        font-weight: 200;
+    }
+}
+
+@media (min-width: 768px) {
+    .hero-text-mobile {
+        display: none;
+    }
+
+    .mobile-title {
+        display: none;
+    }
 }
