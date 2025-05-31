@@ -1,0 +1,36 @@
+@use 'variables' as vars;
+
+// Grid container de productos
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-rows: auto;
+    gap: 32px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: stretch;
+}
+
+// Tarjeta de producto
+.product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    overflow: hidden;
+    text-align: vars.$position-center;
+
+    img {
+        flex-grow: 1;
+        width: 100%;
+        height: auto;
+    }
+}
+
+.product-info {
+    background-color: vars.$color-bg-product;
+    color: vars.$color-text;
+    padding: 4px 0;
+    font-size: 12px;
+}

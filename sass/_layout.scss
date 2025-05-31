@@ -1,0 +1,107 @@
+@use 'variables' as vars;
+
+//  ----------------- Header -----------------
+header {
+    padding: 0 40px;
+}
+
+.main-nav {
+    border-top: 1px solid vars.$color-text;
+    border-bottom: 1px solid vars.$color-text;
+    font-size: 26px;
+}
+
+.nav-link {
+    color: vars.$color-text;
+    font-weight: vars.$font-weight-light;
+
+    &.active {
+        border-radius: vars.$border-radius;
+        color: vars.$color-text !important; // tuve que forzar la variable de bootstrap
+    }
+
+    &:hover {
+        color: vars.$color-link-hover;
+        text-decoration: none;
+    }
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: vars.$position-center;
+    padding: 20px;
+
+    img {
+        width: 40px;
+        cursor: pointer;
+    }
+
+    .logo {
+        width: 140px;
+        height: auto;
+    }
+}
+
+.left-icons,
+.right-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.logo-container {
+    flex: 1;
+    display: flex;
+    justify-content: vars.$position-center;
+}
+
+// manera mas simple de cambiar el color del icono hamburguesa ya que 
+// es un background-image generado con un SVG embebido en CSS
+.navbar-toggler-icon {
+    filter: brightness(0) invert(1);
+}
+
+// -------------------- Main --------------------
+main {
+    flex: 1 0 auto;
+}
+
+.title-section {
+    padding-top: 30px;
+    font-weight: vars.$font-weight-light;
+}
+
+.nav-link.active,
+.main-content {
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(6px);
+}
+
+// -------------------- Footer ------------------------
+footer {
+    background-color: vars.$color-bg-footer;
+    padding: 32px 16px;
+}
+
+.footer-content {
+    max-width: vars.$max-width-content;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.footer-item {
+    img {
+        width: 30px;
+        height: 30px;
+    }
+
+    p {
+        margin: 0;
+        font-size: 14px;
+        color: vars.$color-text;
+    }
+}

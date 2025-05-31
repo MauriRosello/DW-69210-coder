@@ -1,0 +1,90 @@
+@use 'variables' as vars;
+
+@media (max-width: 767px) {
+    .mobile-title {
+        text-align: vars.$position-center;
+        padding-left: 40px;
+        margin-bottom: 0;
+    }
+
+    .nav-item .nav-link {
+        font-size: 16px;
+    }
+
+    .top-bar {
+        .logo {
+            width: 100px;
+        }
+    
+        .icon {
+            width: 30px;
+        }
+    } 
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "form-section"
+            "image-section";
+    }
+
+    .image-section {
+        display: none;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-card {
+        height: 595px;
+
+        img {
+            height: 250px;
+        }
+    }
+
+    .footer-content {
+        justify-content: vars.$position-center;
+    }
+
+    .footer-item {
+        flex: 0 0 45%;
+        max-width: 45%;
+        box-sizing: border-box;
+        text-align: vars.$position-center;
+    }
+
+    .whatsapp-container {
+        width: 58px;
+        height: 54px;
+    }
+
+    .hero-text {
+        display: none;
+    }
+
+    .hero-text-mobile {
+        font-size: 12px;
+        margin-bottom: 0;
+    }
+
+    .whatsapp-icon {
+        width: 33px;
+    }
+
+    .mobile-title {
+        font-size: 19px;
+        font-weight: 200;
+    }
+}
+
+@media (min-width: 768px) {
+    .hero-text-mobile {
+        display: none;
+    }
+
+    .mobile-title {
+        display: none;
+    }
+}

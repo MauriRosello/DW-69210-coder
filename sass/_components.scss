@@ -1,0 +1,38 @@
+//  lo que no sea global ni layout ni producto va aca.
+@use 'variables' as vars;
+
+// Hero
+.hero {
+    display: flex;
+    justify-content: vars.$position-center;
+    align-items: vars.$position-center;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    text-align: vars.$position-center;
+}
+
+.hero-text {
+    font-size: 26px;
+}
+
+.hero-text-mobile {
+    font-size: 12px;
+    margin-bottom: 0;
+}
+
+// Whatsapp container
+.whatsapp-container {
+    position: absolute;
+    right: 0;
+    bottom: 50%;
+    padding: 12px;
+    background-color: vars.$color-whatsapp-bg;
+    width: 100px;
+    border-radius: 4px;
+    text-align: vars.$position-center;
+}
+
+.whatsapp-icon {
+    width: 50px;
+}

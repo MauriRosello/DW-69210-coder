@@ -1,0 +1,51 @@
+@use 'variables' as vars;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: vars.$font-family-roboto;
+    background-color: vars.$color-bg;
+    color: vars.$color-text;
+    line-height: 1.6;
+    background-image: url('../assets/img/hero-image.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: vars.$position-center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+// Links
+a {
+    color: vars.$color-text;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+// Listas
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+// Titulos
+h1 {
+    text-align: vars.$position-center;
+}
+
+// Text shadows comunes para títulos y secciones
+h1,
+.main-nav,
+.hero-text,
+.location-section,
+.location-info {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
