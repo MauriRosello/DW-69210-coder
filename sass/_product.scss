@@ -23,7 +23,12 @@
 
     img {
         @include size(100%, auto);
+        transition: transform 0.5s ease-in-out;
         flex-grow: 1;
+
+        &:hover {
+          transform: scale(1.03);
+        }
     }
 }
 
