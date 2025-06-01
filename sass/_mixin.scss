@@ -1,0 +1,14 @@
+@mixin frosted-glass($bg-color, $blur) {
+    background-color: $bg-color;
+    backdrop-filter: blur($blur);
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin size($width, $height) {
+    width: $width;
+    height: $height;
+}

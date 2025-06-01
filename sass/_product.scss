@@ -1,4 +1,5 @@
 @use 'variables' as vars;
+@use 'mixin' as *;
 
 // Grid container de productos
 .product-grid {
@@ -14,17 +15,15 @@
 
 // Tarjeta de producto
 .product-card {
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
     justify-content: space-between;
     height: 100%;
     overflow: hidden;
     text-align: vars.$position-center;
 
     img {
+        @include size(100%, auto);
         flex-grow: 1;
-        width: 100%;
-        height: auto;
     }
 }
 

@@ -1,4 +1,5 @@
 @use 'variables' as vars;
+@use 'mixin' as *;
 
 //  ----------------- Header -----------------
 header {
@@ -16,6 +17,7 @@ header {
     font-weight: vars.$font-weight-light;
 
     &.active {
+        @include frosted-glass(rgba(0, 0, 0, 0.4),  6px);
         border-radius: vars.$border-radius;
         color: vars.$color-text !important; // tuve que forzar la variable de bootstrap
     }
@@ -38,15 +40,13 @@ header {
     }
 
     .logo {
-        width: 140px;
-        height: auto;
+        @include size(140px, auto);
     }
 }
 
 .left-icons,
 .right-icons {
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
     gap: 10px;
 }
 
@@ -72,10 +72,8 @@ main {
     font-weight: vars.$font-weight-light;
 }
 
-.nav-link.active,
 .main-content {
-    background-color: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(6px);
+    @include frosted-glass(rgba(0, 0, 0, 0.4),  6px);
 }
 
 // -------------------- Footer ------------------------
@@ -95,8 +93,7 @@ footer {
 
 .footer-item {
     img {
-        width: 30px;
-        height: 30px;
+        @include size(30px, 30px);
     }
 
     p {

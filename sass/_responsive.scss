@@ -1,5 +1,6 @@
 @use 'variables' as vars;
-
+@use 'mixin' as *;
+ 
 @media (max-width: 767px) {
     .mobile-title {
         text-align: vars.$position-center;
@@ -56,8 +57,7 @@
     }
 
     .whatsapp-container {
-        width: 58px;
-        height: 54px;
+        @include size(58px, 54px);
     }
 
     .hero-text {

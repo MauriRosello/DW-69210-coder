@@ -1,4 +1,5 @@
 @use 'variables' as vars;
+@use 'mixin' as *;
 
 * {
     box-sizing: border-box;
@@ -7,6 +8,7 @@
 }
 
 body {
+    @include flex-column;
     font-family: vars.$font-family-roboto;
     background-color: vars.$color-bg;
     color: vars.$color-text;
@@ -16,8 +18,6 @@ body {
     background-size: cover;
     background-position: vars.$position-center;
     height: 100vh;
-    display: flex;
-    flex-direction: column;
 }
 
 // Links

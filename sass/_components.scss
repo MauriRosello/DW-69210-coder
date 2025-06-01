@@ -1,12 +1,12 @@
 //  lo que no sea global ni layout ni producto va aca.
 @use 'variables' as vars;
+@use 'mixin' as *;
 
 // Hero
 .hero {
-    display: flex;
+    @include flex-column;
     justify-content: vars.$position-center;
     align-items: vars.$position-center;
-    flex-direction: column;
     height: 100%;
     position: relative;
     text-align: vars.$position-center;
@@ -21,9 +21,10 @@
     margin-bottom: 0;
 }
 
-// Whatsapp container
+// Whatsapp
 .whatsapp-container {
-    position: absolute;
+    position: sticky;
+    margin-left: auto;
     right: 0;
     bottom: 50%;
     padding: 12px;
@@ -31,6 +32,7 @@
     width: 100px;
     border-radius: 4px;
     text-align: vars.$position-center;
+    z-index: 100;
 }
 
 .whatsapp-icon {
