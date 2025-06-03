@@ -19,6 +19,15 @@
 .hero-text-mobile {
     font-size: 12px;
     margin-bottom: 0;
+    display: inline-block;
+    white-space: nowrap;
+    animation: deplazamiento 10s linear infinite;
+}
+
+.marquee-container {
+    width: 74%;
+    overflow: hidden;
+    position: relative;
 }
 
 // Whatsapp
@@ -37,4 +46,14 @@
 
 .whatsapp-icon {
     width: 50px;
+}
+
+@keyframes deplazamiento {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
 }
